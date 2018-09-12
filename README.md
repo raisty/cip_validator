@@ -41,7 +41,7 @@ cip_validator INPUT_FILES
 ## Usage (as a lib)
 
 ```ruby
-require 'cip_validator
+require 'cip_validator'
 
 CipValidator::Runner.run 
 ```
