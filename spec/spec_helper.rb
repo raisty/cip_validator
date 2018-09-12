@@ -1,4 +1,4 @@
-require "eip_validator"
+require "cip_validator"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

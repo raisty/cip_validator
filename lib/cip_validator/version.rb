@@ -1,3 +1,3 @@
-module EipValidator
+module CipValidator
   VERSION = "0.8.0"
 end

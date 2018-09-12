@@ -1,6 +1,6 @@
 require 'active_model'
 
-module EipValidator
+module CipValidator
   class Validator
     def initialize(opts = {})
       # ruby does not allow method with -
@@ -16,13 +16,13 @@ module EipValidator
     end
 
     include ActiveModel::Model
-    attr_accessor :eip, :title, :author, :type, :category, :status, :created
+    attr_accessor :cip, :title, :author, :type, :category, :status, :created
     attr_accessor :replaces, :requires, :layer
     # replace - with _
     attr_accessor :discussions_to
-    validates_presence_of :eip, :title, :author, :type, :status, :created
+    validates_presence_of :cip, :title, :author, :type, :status, :created
     validates_inclusion_of :category,
-                           in: %w(Core Networking Interface ERC),
+                           in: %w(Core Networking Interface CRC),
                            if: Proc.new { |v| v.type == 'Standards Track' }
     validates_inclusion_of :type, in: ['Standards Track', 'Informational', 'Meta']
     validates_inclusion_of :status, in: ['Draft', 'Active', 'Accepted', 'Final', 'Deferred', 'Last Call']

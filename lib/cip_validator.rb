@@ -1,8 +1,8 @@
-require "eip_validator/version"
-require 'eip_validator/loader'
-require 'eip_validator/validator'
+require "cip_validator/version"
+require "cip_validator/loader"
+require "cip_validator/validator"
 
-module EipValidator
+module CipValidator
   class Runner
     class << self  
       def run(file_names)
@@ -17,8 +17,8 @@ module EipValidator
         layers = []
         file_names.map do |file_name|
           # Disable file check
-          # unless file_name.match(/.*eip-\d+.md$/)
-          #   puts "Warning: #{file_name} does not match eip file format"
+          # unless file_name.match(/.*cip-\d+.md$/)
+          #   puts "Warning: #{file_name} does not match cip file format"
           #   next
           # end
           attributes = Loader.load(file_name)

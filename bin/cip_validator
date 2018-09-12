@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'cip_validator'
+
+CipValidator::Runner.run ARGV

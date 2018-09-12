@@ -1,12 +1,12 @@
 require 'spec_helper'
 
-RSpec.describe "EipValidator::Loader"  do
+RSpec.describe "CipValidator::Loader"  do
   let(:category) { 'Core' }
   let(:type) { 'Standards Track' }
   let(:status) { 'Final' }
-  let(:eip){
+  let(:cip){
     {
-      "eip" => 145,
+      "cip" => 145,
       "title" => 'Bitwise shifting instructions in EVM',
       "author" => 'Alex Beregszaszi, Paweł Bylica',
       "type" => type,
@@ -16,14 +16,14 @@ RSpec.describe "EipValidator::Loader"  do
     }
   }
   let(:file_name) {
-   'spec/fixtures/valid/eip-145.md'
+   'spec/fixtures/valid/cip-145.md'
   }
 
-  subject(:loader){ EipValidator::Loader.load(file_name)}
+  subject(:loader){ CipValidator::Loader.load(file_name)}
 
   describe "valid" do
     it "should have required fields" do
-      expect(loader).to eq(eip)
+      expect(loader).to eq(cip)
     end
   end
 end

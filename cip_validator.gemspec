@@ -1,16 +1,16 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "eip_validator/version"
+require "cip_validator/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "eip_validator"
-  spec.version       = EipValidator::VERSION
-  spec.authors       = ["Makoto"]
-  spec.email         = ["@makoto_inoue"]
+  spec.name          = "cip_validator"
+  spec.version       = CipValidator::VERSION
+  spec.authors       = ["Makoto", "Raisty"]
+  spec.email         = ["537310+raisty@users.noreply.github.com"]
 
-  spec.summary       = "Small library to check if EIP doc has valid front matter"
-  spec.homepage      = "https://github.com/makoto/eip_validator"
+  spec.summary       = "Small library to check if CIP doc has valid front matter"
+  spec.homepage      = "https://github.com/raisty/cip_validator"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
