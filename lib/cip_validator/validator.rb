@@ -17,7 +17,7 @@ module CipValidator
 
     include ActiveModel::Model
     attr_accessor :cip, :title, :author, :type, :category, :status, :created
-    attr_accessor :replaces, :requires, :layer
+    attr_accessor :replaces, :requires, :layer, :alias
     # replace - with _
     attr_accessor :discussions_to
     validates_presence_of :cip, :title, :author, :type, :status, :created

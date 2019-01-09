@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "cip_validator"
   spec.version       = CipValidator::VERSION
   spec.authors       = ["Makoto", "Raisty"]
-  spec.email         = ["537310+raisty@users.noreply.github.com"]
+  spec.email         = ["rastislav@corecoin.cc"]
 
   spec.summary       = "Small library to check if CIP doc has valid front matter"
   spec.homepage      = "https://github.com/raisty/cip_validator"

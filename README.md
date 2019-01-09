@@ -17,6 +17,7 @@
 - replaces
 - requires
 - layer
+- alias
 
 ### Mandatory values
 
@@ -51,8 +52,8 @@ CipValidator::Runner.run
 ```
 $cip_validator  ~/src/CIP/CIP/*[0-9].md
 
-Warning: /Users/raisty/src/CIP/CIP/cip-158.md 	 unknown attribute 'superseded-by' for CipValidator::Validator.
-Warning: /Users/raisty/src/CIP/CIP/cip-615.md 	 unknown attribute 'edited' for CipValidator::Validator.
+Warning: /Users/phoenix/src/CIP/CIP/cip-158.md 	 unknown attribute 'superseded-by' for CipValidator::Validator.
+Warning: /Users/phoenix/src/CIP/CIP/cip-615.md 	 unknown attribute 'edited' for CipValidator::Validator.
 
 
 total:51, valid:49, invalid:0, errors:2
