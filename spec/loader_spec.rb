@@ -6,17 +6,17 @@ RSpec.describe "CipValidator::Loader"  do
   let(:status) { 'Final' }
   let(:cip){
     {
-      "cip" => 145,
-      "title" => 'Bitwise shifting instructions in EVM',
-      "author" => 'Alex Beregszaszi, Paweł Bylica',
+      "cip" => 1,
+      "title" => 'Test CVM',
+      "author" => 'Raisty',
       "type" => type,
       "category" => category,
       "status" =>   status,
-      "created" =>  Date.parse('2017-02-13')
+      "created" =>  Date.parse('2020-01-01')
     }
   }
   let(:file_name) {
-   'spec/fixtures/valid/cip-145.md'
+   'spec/fixtures/valid/cip-1.md'
   }
 
   subject(:loader){ CipValidator::Loader.load(file_name)}

@@ -17,7 +17,7 @@ module CipValidator
 
     include ActiveModel::Model
     attr_accessor :cip, :title, :author, :type, :category, :status, :created
-    attr_accessor :replaces, :requires, :layer, :alias
+    attr_accessor :replaces, :requires, :layer, :alias, :hidden
     # replace - with _
     attr_accessor :discussions_to
     validates_presence_of :cip, :title, :author, :type, :status, :created
@@ -28,4 +28,3 @@ module CipValidator
     validates_inclusion_of :status, in: ['Draft', 'Active', 'Accepted', 'Final', 'Deferred', 'Last Call']
   end
 end
-

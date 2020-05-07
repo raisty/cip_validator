@@ -1,9 +1,9 @@
 ---
-cip: 145
+cip: 1
 title: Test CVM
 author: Raisty
 type: Standards Track
 category: Core
 status: INVALID
-created: 2017-02-13
+created: 2020-01-01
 ---

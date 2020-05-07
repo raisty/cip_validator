@@ -18,6 +18,7 @@
 - requires
 - layer
 - alias
+- hidden
 
 ### Mandatory values
 
@@ -44,16 +45,16 @@ cip_validator INPUT_FILES
 ```ruby
 require 'cip_validator'
 
-CipValidator::Runner.run 
+CipValidator::Runner.run
 ```
 
 ### Example
 
 ```
-$cip_validator  ~/src/CIP/CIP/*[0-9].md
+$cip_validator  ~/src/CIP/cip/*[0-9].md
 
-Warning: /Users/phoenix/src/CIP/CIP/cip-158.md 	 unknown attribute 'superseded-by' for CipValidator::Validator.
-Warning: /Users/phoenix/src/CIP/CIP/cip-615.md 	 unknown attribute 'edited' for CipValidator::Validator.
+Warning: /Users/phoenix/src/CIP/cip/cip-1.md 	 unknown attribute 'superseded-by' for CipValidator::Validator.
+Warning: /Users/phoenix/src/CIP/cip/cip-2.md 	 unknown attribute 'edited' for CipValidator::Validator.
 
 
 total:51, valid:49, invalid:0, errors:2

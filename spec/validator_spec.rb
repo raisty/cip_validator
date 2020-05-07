@@ -7,13 +7,13 @@ RSpec.describe "CipValidator::Validator"  do
 
   let(:cip){
     {
-      cip: 145,
+      cip: 1,
       title: 'Test CVM',
       author: 'Raisty',
       type: type,
       category: category,
       status:   status,
-      created: '2017-02-13'
+      created: '2020-01-01'
     }
   }
   subject(:validator){ CipValidator::Validator.new(cip)}
@@ -58,7 +58,7 @@ RSpec.describe "CipValidator::Validator"  do
     it "is valid if specified" do
       CipValidator::Validator.new(cip.merge({'discussions-to':'something'}))
     end
- 
+
     it "not valid if not specified" do
       expect{
         CipValidator::Validator.new(cip.merge({'how-to':'something'}))
@@ -80,7 +80,7 @@ RSpec.describe "CipValidator::Validator"  do
     [nil, 'Something else'].each do |value|
       describe "category '#{value}' is not valid" do
         let(:category) { value }
-        it{ expect(validator.valid?).to eq false } 
+        it{ expect(validator.valid?).to eq false }
       end
     end
 
@@ -88,17 +88,17 @@ RSpec.describe "CipValidator::Validator"  do
       describe "category value '#{value}'' is valid" do
         let(:category) { value }
         it{ expect(validator.valid?).to eq true }
-      end  
+      end
     end
   end
 
   describe "type is not Standards Track" do
     let(:type) { 'Meta' }
-  
+
     [nil, 'Something else'].each do |value|
       describe "category '#{value}' is valid" do
         let(:category) { value }
-        it{ expect(validator.valid?).to eq true } 
+        it{ expect(validator.valid?).to eq true }
       end
     end
   end
